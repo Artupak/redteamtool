@@ -1,0 +1,54 @@
+# Phishing Module Configuration
+
+# SMTP Settings
+smtp_server: "smtp.example.com"
+smtp_port: 587
+smtp_username: "security@example.com"
+smtp_password: "YOUR_PASSWORD_HERE"
+from_email: "security@example.com"
+
+# Template Settings
+template_file: "templates/phishing/security_update.html"
+targets_file: "data/targets.csv"
+
+# Optional Settings
+attachment_file: null  # Set to file path if needed
+
+# Campaign Settings
+campaign_name: "Security Awareness Test"
+company_name: "Example Corp"
+
+# Tracking Settings
+enable_tracking: true
+tracking_pixel: true
+click_tracking: true
+
+# Customization
+email_subject: "Important Security Alert - Action Required"
+sender_name: "IT Security Team"
+
+# Rate Limiting
+emails_per_hour: 50
+delay_between_emails: 5  # seconds
+
+# Logging
+log_level: "INFO"
+save_failed_attempts: true
+
+# Advanced Settings
+use_ssl: true
+verify_certs: true
+timeout: 30  # seconds
+
+# Custom Headers
+headers:
+  X-Priority: "1"
+  X-MSMail-Priority: "High"
+  Importance: "high"
+
+# Template Variables
+template_defaults:
+  company_name: "Example Corp"
+  support_email: "support@example.com"
+  support_phone: "+1-555-0123"
+  current_year: "2024" 

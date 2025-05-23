@@ -1,0 +1,6 @@
+email,name,department,location,device,timestamp,verification_link
+john.doe@example.com,John Doe,IT,New York,Windows 10 PC,2024-03-15 14:30:00,https://security.example.com/verify/user123
+jane.smith@example.com,Jane Smith,HR,London,MacBook Pro,2024-03-15 15:45:00,https://security.example.com/verify/user124
+bob.wilson@example.com,Bob Wilson,Finance,Chicago,iPhone 13,2024-03-15 16:15:00,https://security.example.com/verify/user125
+alice.johnson@example.com,Alice Johnson,Marketing,Los Angeles,Android Phone,2024-03-15 17:00:00,https://security.example.com/verify/user126
+mike.brown@example.com,Mike Brown,Sales,Toronto,iPad Pro,2024-03-15 18:30:00,https://security.example.com/verify/user127 

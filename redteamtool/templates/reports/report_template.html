@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red Team Operation Report</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 40px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .confidential {
+            color: #ff0000;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border: 2px solid #ff0000;
+            margin: 20px 0;
+        }
+        .section {
+            margin: 30px 0;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+        }
+        .finding {
+            margin: 20px 0;
+            padding: 15px;
+            border-left: 4px solid #e74c3c;
+            background-color: #fff;
+        }
+        .severity-high {
+            border-left-color: #e74c3c;
+        }
+        .severity-medium {
+            border-left-color: #f39c12;
+        }
+        .severity-low {
+            border-left-color: #3498db;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f5f5f5;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Red Team Operation Report</h1>
+        <p>Report Generated: {{timestamp}}</p>
+    </div>
+
+    <div class="confidential">
+        Confidential Information - For Authorized Personnel Only
+    </div>
+
+    <div class="section">
+        <h2>Executive Summary</h2>
+        <p>{{executive_summary}}</p>
+    </div>
+
+    <div class="section">
+        <h2>Scope of Assessment</h2>
+        <ul>
+            {{scope_items}}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Methodology</h2>
+        <p>{{methodology}}</p>
+    </div>
+
+    <div class="section">
+        <h2>Key Findings</h2>
+        {{#each findings}}
+        <div class="finding severity-{{severity}}">
+            <h3>{{title}}</h3>
+            <p><strong>Severity:</strong> {{severity}}</p>
+            <p><strong>Description:</strong> {{description}}</p>
+            <p><strong>Impact:</strong> {{impact}}</p>
+            <p><strong>Recommendation:</strong> {{recommendation}}</p>
+        </div>
+        {{/each}}
+    </div>
+
+    <div class="section">
+        <h2>Technical Details</h2>
+        <h3>Network Discovery Results</h3>
+        <table>
+            <tr>
+                <th>Host</th>
+                <th>Open Ports</th>
+                <th>Services</th>
+                <th>Vulnerabilities</th>
+            </tr>
+            {{network_discovery_results}}
+        </table>
+
+        <h3>Privilege Escalation Findings</h3>
+        {{privesc_findings}}
+
+        <h3>Lateral Movement Analysis</h3>
+        {{lateral_movement_findings}}
+    </div>
+
+    <div class="section">
+        <h2>Risk Assessment Matrix</h2>
+        <table>
+            <tr>
+                <th>Finding</th>
+                <th>Likelihood</th>
+                <th>Impact</th>
+                <th>Risk Score</th>
+            </tr>
+            {{risk_matrix}}
+        </table>
+    </div>
+
+    <div class="section">
+        <h2>Recommendations</h2>
+        <ol>
+            {{recommendations}}
+        </ol>
+    </div>
+
+    <div class="section">
+        <h2>Appendices</h2>
+        <h3>Tools Used</h3>
+        <ul>
+            {{tools_used}}
+        </ul>
+
+        <h3>Evidence and Artifacts</h3>
+        {{evidence_list}}
+    </div>
+
+    <div class="section">
+        <h2>Report Metadata</h2>
+        <p><strong>Report ID:</strong> {{report_id}}</p>
+        <p><strong>Assessment Period:</strong> {{assessment_period}}</p>
+        <p><strong>Report Author:</strong> {{author}}</p>
+        <p><strong>Classification:</strong> Confidential</p>
+    </div>
+</body>
+</html> 

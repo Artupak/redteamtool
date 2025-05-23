@@ -1,0 +1,13 @@
+include README.md
+include LICENSE
+include requirements.txt
+
+recursive-include templates *
+recursive-include config *
+recursive-include reports/templates *
+recursive-include data *.csv
+
+global-exclude __pycache__
+global-exclude *.py[cod]
+global-exclude *.so
+global-exclude .DS_Store 

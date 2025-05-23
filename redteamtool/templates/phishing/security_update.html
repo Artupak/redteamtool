@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Update Required</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        .header {
+            background-color: #0078D4;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #0078D4;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .footer {
+            margin-top: 20px;
+            font-size: 12px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>Important Security Update Required</h2>
+    </div>
+    
+    <div class="content">
+        <p>Dear {{ name }},</p>
+        
+        <p>Our security team has detected unusual login attempts on your account from the following location:</p>
+        
+        <ul>
+            <li><strong>Location:</strong> {{ location|default('Unknown Location') }}</li>
+            <li><strong>Device:</strong> {{ device|default('Unknown Device') }}</li>
+            <li><strong>Time:</strong> {{ timestamp|default('Recent') }}</li>
+        </ul>
+        
+        <p>To ensure the security of your account, please verify your identity and update your security settings immediately by clicking the button below:</p>
+        
+        <p style="text-align: center;">
+            <a href="{{ verification_link|default('#') }}" class="button">Verify Account & Update Security</a>
+        </p>
+        
+        <p><strong>Note:</strong> If you do not verify your account within 24 hours, your access may be temporarily restricted for security purposes.</p>
+        
+        <p>If you did not attempt to log in from this location, please change your password immediately and contact our security team.</p>
+    </div>
+    
+    <div class="footer">
+        <p>This is an automated security notification. Please do not reply to this email.</p>
+        <p>© {{ current_year|default('2024') }} {{ company_name|default('Company Name') }}. All rights reserved.</p>
+    </div>
+</body>
+</html> 
