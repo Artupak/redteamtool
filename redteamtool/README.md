@@ -13,7 +13,6 @@ A comprehensive, modular Red Team Operations framework for security testing and 
 - **Advanced Reporting**: Generate detailed HTML/PDF reports
 - **Configurable Options**: Extensive configuration for each module
 - **Security-First**: Built-in security measures and cleanup procedures
-
 ## Installation
 
 ```bash
